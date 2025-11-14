@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Esame.CartPage"
+             Title="CartPage">
+    <ScrollView Padding="10">
+        <VerticalStackLayout Spacing="20">
+            <Label Text="Carrello" FontSize="24" FontAttributes="Bold" HorizontalOptions="Center" />
+
+            <!-- Lista dei prodotti nel carrello -->
+            <CollectionView ItemsSource="{Binding CartItems}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Padding="10">
+                            <Image Source="{Binding Image}" HeightRequest="100" WidthRequest="100" HorizontalOptions="Center" />
+                            <Label Text="{Binding Title}" FontSize="18" HorizontalOptions="Center" />
+                            <Label Text="{Binding Price, StringFormat='${0:F2}'}" FontSize="16" TextColor="Green" HorizontalOptions="Center" />
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

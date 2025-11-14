@@ -5,6 +5,11 @@
 
     <ScrollView>
         <VerticalStackLayout>
+            <Button Text="Visualizza Carrello" 
+            Clicked="OnViewCartClicked" 
+            HorizontalOptions="Center" 
+            BackgroundColor="Blue" 
+            TextColor="White" />
             <CollectionView x:Name="MyCollectionView" SelectionMode="Single"  SelectionChanged="OnSelectionChanged" ItemsSource="{Binding Items}" Margin="50">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
@@ -34,14 +39,6 @@
                                        FontSize="14" 
                                        TextColor="Gray" 
                                        HorizontalOptions="Center" />
-
-                            <!-- Descrizione del prodotto -->
-                            <Label Text="{Binding Description}" 
-                                       FontSize="14" 
-                                       TextColor="White" 
-                                       LineBreakMode="WordWrap" 
-                                       MaxLines="3" 
-                                       HorizontalOptions="FillAndExpand" />
                         </StackLayout>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>

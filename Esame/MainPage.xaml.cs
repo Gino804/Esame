@@ -48,6 +48,11 @@
             }
         }
 
+        private async void OnViewCartClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new CartPage());
+        }
+
         private async void OnCounterClicked(object? sender, EventArgs e) 
         {
             var service = new RestService();

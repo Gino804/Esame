@@ -38,6 +38,12 @@
                    FontSize="16" 
                    TextColor="Gray" 
                    HorizontalOptions="Center" />
+
+            <Button Text="Aggiungi al carrello" 
+                    Clicked="OnAddToCartClicked" 
+                    HorizontalOptions="Center" 
+                    BackgroundColor="Green" 
+                    TextColor="White" />
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

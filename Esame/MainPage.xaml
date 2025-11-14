@@ -5,7 +5,7 @@
 
     <ScrollView>
         <VerticalStackLayout>
-            <CollectionView x:Name="MyCollectionView" SelectionMode="Single"  ItemsSource="{Binding Items}" Margin="50">
+            <CollectionView x:Name="MyCollectionView" SelectionMode="Single"  SelectionChanged="OnSelectionChanged" ItemsSource="{Binding Items}" Margin="50">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <StackLayout Margin="50">

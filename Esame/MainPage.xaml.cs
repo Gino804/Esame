@@ -35,6 +35,19 @@
             OnPropertyChanged(nameof(Items));
         }
 
+        // Metodo che gestisce la selezione di un prodotto
+        private async void OnSelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (e.CurrentSelection.Count > 0)
+            {
+                // Prendi il prodotto selezionato
+                var selectedProduct = e.CurrentSelection[0] as Product;
+
+                // Naviga alla pagina dei dettagli passando il prodotto
+                await Navigation.PushAsync(new DetailPage { BindingContext = selectedProduct });
+            }
+        }
+
         private async void OnCounterClicked(object? sender, EventArgs e) 
         {
             var service = new RestService();

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Esame.DetailPage"
+             BackgroundColor="White">
+
+    <ScrollView Padding="10">
+        <VerticalStackLayout Spacing="20">
+            <!-- Immagine ingrandita -->
+            <Image Source="{Binding Image}" 
+                   Aspect="AspectFit"
+                   HeightRequest="300"
+                   WidthRequest="300"
+                   HorizontalOptions="Center" />
+
+            <!-- Titolo -->
+            <Label Text="{Binding Title}" 
+                   FontSize="24" 
+                   FontAttributes="Bold" 
+                   TextColor="Black" 
+                   HorizontalOptions="Center" />
+
+            <!-- Prezzo -->
+            <Label Text="{Binding Price, StringFormat='${0:F2}'}" 
+                   FontSize="20" 
+                   TextColor="Green" 
+                   HorizontalOptions="Center" />
+
+            <!-- Descrizione -->
+            <Label Text="{Binding Description}" 
+                   FontSize="16" 
+                   TextColor="Black" 
+                   LineBreakMode="WordWrap" 
+                   HorizontalOptions="FillAndExpand" />
+
+            <!-- Categoria -->
+            <Label Text="{Binding Category}" 
+                   FontSize="16" 
+                   TextColor="Gray" 
+                   HorizontalOptions="Center" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
